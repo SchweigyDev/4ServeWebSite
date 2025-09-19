@@ -1,0 +1,43 @@
+/* global.css */
+
+/* Reset basic elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent horizontal scroll */
+html, body {
+    overflow-x: hidden;
+    font-family: sans-serif;
+    background: #111;
+    color: #fff;
+}
+
+/* Optional smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Links default style */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.slogan-text {
+    margin-top: clamp(15px, 2vw, 40px); /* default for small screens */
+}
+
+/* Full desktop screens only */
+@media (min-width: 1440px) {
+    .slogan-text {
+        margin-top: 150px; /* increase spacing on large screens */
+    }
+}
+
+/* Make anchor scrolling account for sticky navbar height */
+html {
+    scroll-padding-top: 100px; /* adjust to match your navbar height */
+}
