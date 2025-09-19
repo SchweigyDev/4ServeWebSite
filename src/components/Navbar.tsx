@@ -3,7 +3,7 @@ import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import newLogo from '../assets/images/4ServeLogoStandAlone.jpg';
 
 const Navbar = () => {
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [_windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);

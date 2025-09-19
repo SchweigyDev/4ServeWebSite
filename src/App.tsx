@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import WhatsBroken from "./components/WhatsBroken.tsx";
 import TheSolution from "./components/TheSolution.tsx";
-import UserCases from "./components/UserCases.tsx";
+// import UserCases from "./components/UserCases.tsx";
 import TheUserSide from "./components/TheUserSide.tsx";
 import HowItWorks from "./components/HowItWorks.tsx";
 import CTA from "./components/CTA.tsx";
