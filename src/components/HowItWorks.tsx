@@ -1,18 +1,7 @@
-import React from "react";
 import howItWorksImage from "../assets/images/4ServeLogoStandAlone.jpg"; // replace with your tablet image
+import React from "react";
 
-const HowItWorks = () => {
-    // Smooth scroll function
-    const scrollToSection = (id) => {
-        const element = document.getElementById(id);
-        if (element) {
-            window.scrollTo({
-                top: element.offsetTop - 100, // offset for navbar
-                behavior: "smooth",
-            });
-        }
-    };
-
+const HowItWorks: React.FC = () => {
     return (
         <section
             id="how-it-works-section"
@@ -23,7 +12,7 @@ const HowItWorks = () => {
                 justifyContent: "center",
                 alignItems: "center",
                 padding: "clamp(100px, 10vw, 120px) 10% 80px",
-                background: "rgba(0, 102, 255, 0.1)",
+                background: "#161618",
                 color: "white",
                 scrollMarginTop: "100px",
             }}
@@ -68,13 +57,11 @@ const HowItWorks = () => {
                             color: "#00D4FF",
                         }}
                     >
-                        Take Back Control in Three <br />
-                        Simple Steps
-
+                        Simple, Powerful, Ready
                     </h2>
-                    {/*<p style={{ fontSize: "1.15rem", margin: 0 }}>*/}
-                    {/*    Our platform makes it easy for small businesses to connect with customers nearby. No complexity, just results.*/}
-                    {/*</p>*/}
+                    <p style={{ fontSize: "1.15rem", margin: 0 }}>
+                        Our platform makes it easy for small businesses to connect with customers nearby. No complexity, just results.
+                    </p>
                 </div>
 
                 {/* Right Tablet Image */}
@@ -132,7 +119,7 @@ const HowItWorks = () => {
                     {
                         number: "3",
                         title: "Set Your Location",
-                        text: "Add your address and write your message. When customers walk by, they get your message instantly",
+                        text: "Add your address and write your message. When customers walk by, they get your message instantly.",
                     },
                 ].map((box, index) => (
                     <div
@@ -149,30 +136,18 @@ const HowItWorks = () => {
                             transition: "transform 0.3s ease, box-shadow 0.3s ease",
                         }}
                     >
-                        <h3
-                            style={{
-                                fontSize: "1.3rem",
-                                marginBottom: "10px",
-                                color: "#00D4FF",
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                                gap: "10px",
-                            }}
-                        >
-                            {/* Circle number */}
+                        <h3 style={{ fontSize: "1.3rem", marginBottom: "10px", color: "#00D4FF", display: "flex", alignItems: "center", justifyContent: "center", gap: "10px" }}>
                             <span
                                 style={{
                                     display: "inline-flex",
                                     alignItems: "center",
                                     justifyContent: "center",
-                                    width: "32px",
-                                    height: "32px",
+                                    width: "30px",
+                                    height: "30px",
                                     borderRadius: "50%",
                                     background: "#00D4FF",
-                                    color: "black",
+                                    color: "#161618",
                                     fontWeight: "700",
-                                    fontSize: "1rem",
                                 }}
                             >
                                 {box.number}
@@ -187,16 +162,16 @@ const HowItWorks = () => {
             {/* Styles for hover animation and responsiveness */}
             <style>{`
                 .how-box:hover {
-                  transform: translateY(-10px);
-                  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+                    transform: translateY(-10px);
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
                 }
 
                 @media (max-width: 768px) {
-                  #how-it-works-section div:nth-child(2) {
-                    flex-direction: column;
-                    gap: 40px;
-                    align-items: center;
-                  }
+                    #how-it-works-section div:nth-child(2) {
+                        flex-direction: column;
+                        gap: 40px;
+                        align-items: center;
+                    }
                 }
             `}</style>
         </section>

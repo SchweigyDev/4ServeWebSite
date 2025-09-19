@@ -16,6 +16,21 @@ const Navbar = () => {
         { name: "User Cases", target: "user-cases-section" },
     ];
 
+    // Smooth scroll function
+    const scrollToSection = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            const offset = 100; // adjust for navbar height
+            const elementPosition = element.offsetTop;
+            const offsetPosition = elementPosition - offset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth",
+            });
+        }
+    };
+
     useEffect(() => {
         const handleResize = () => {
             setWindowWidth(window.innerWidth);
@@ -70,14 +85,19 @@ const Navbar = () => {
                     marginLeft: "40px" // pushes section buttons to the right
                 }}>
                     {links.map(link => (
-                        <a
+                        <button
                             key={link.name}
-                            href={`#${link.target}`}
+                            onClick={() => scrollToSection(link.target)}
                             className="nav-link"
-                            style={{ fontSize: "clamp(0.85rem, 1vw, 0.95rem)" }}
+                            style={{
+                                fontSize: "clamp(0.85rem, 1vw, 0.95rem)",
+                                background: "none",
+                                border: "none",
+                                cursor: "pointer"
+                            }}
                         >
                             {link.name}
-                        </a>
+                        </button>
                     ))}
                 </div>
             )}
@@ -147,15 +167,14 @@ const Navbar = () => {
                         }}
                     >
                         {links.map(link => (
-                            <a
+                            <button
                                 key={link.name}
-                                href={`#${link.target}`}
+                                onClick={() => { scrollToSection(link.target); setIsOpen(false); }}
                                 className="mobile-link"
-                                onClick={() => setIsOpen(false)}
-                                style={{ fontSize: "0.95rem" }}
+                                style={{ fontSize: "0.95rem", background: "none", border: "none", cursor: "pointer" }}
                             >
                                 {link.name}
-                            </a>
+                            </button>
                         ))}
 
                         <div style={{ display: "flex", justifyContent: "center", padding: "15px", gap: "12px" }}>
