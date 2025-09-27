@@ -3,11 +3,12 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import WhatsBroken from "./components/WhatsBroken.tsx";
 import TheSolution from "./components/TheSolution.tsx";
-// import UserCases from "./components/UserCases.tsx";
+import UserCases from "./components/UserCases.tsx";
 import TheUserSide from "./components/TheUserSide.tsx";
 import HowItWorks from "./components/HowItWorks.tsx";
 import CTA from "./components/CTA.tsx";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer.tsx";
+import ScrollToTop from "./components/ScrollToTop.tsx";
 
 function App() {
     return (
@@ -18,11 +19,12 @@ function App() {
             <WhatsBroken />
             <TheSolution />
             <HowItWorks />
-            {/*<UserCases />*/}
             <TheUserSide />
+            <UserCases />
             <CTA />
 
             <Footer />
+            <ScrollToTop />
         </div>
     );
 }

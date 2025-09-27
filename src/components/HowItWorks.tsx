@@ -12,7 +12,7 @@ const HowItWorks: React.FC = () => {
                 justifyContent: "center",
                 alignItems: "center",
                 padding: "clamp(100px, 10vw, 120px) 10% 80px",
-                background: "#161618",
+                background: "rgba(0, 102, 255, 0.1)",
                 color: "white",
                 scrollMarginTop: "100px",
             }}

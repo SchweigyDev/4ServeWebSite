@@ -72,3 +72,31 @@ button {
     animation: gradientFlow 5s ease infinite;
 }
 
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, #0066FF, #00D4FF);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 14px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.4s ease;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+}
+
+.scroll-to-top.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+    transform: translateY(-4px) scale(1.1);
+    box-shadow: 0 8px 18px rgba(0, 212, 255, 0.6);
+}
+

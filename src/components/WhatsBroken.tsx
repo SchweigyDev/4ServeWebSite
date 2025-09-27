@@ -28,41 +28,38 @@ const WhatsBroken = () => {
         <section
             id="whats-broken-section"
             style={{
-                scrollMarginTop: "100px", // offsets sticky navbar
+                scrollMarginTop: "100px",
                 position: "relative",
                 display: "flex",
                 flexDirection: "row",
                 justifyContent: "space-between",
                 alignItems: "flex-start",
-                padding: "clamp(60px, 10vw, 0px) 10% clamp(60px, 5vw, 80px) 10%",
+                padding: "clamp(80px, 10vw, 120px) 10% 80px", // ✅ more top padding
                 background: "rgba(0, 102, 255, 0.1)",
                 borderTop: "2px solid #0066FF",
-                borderBottom: "2px solid #0066FF",
                 borderRadius: "12px",
                 color: "white",
                 gap: "clamp(20px, 5vw, 40px)",
                 flexWrap: "wrap",
             }}
         >
-            {/* Title above slogan */}
+            {/* Title in oval top-left */}
             <div
                 style={{
                     position: "absolute",
-                    top: "30px", // moved down a bit
+                    top: "30px",
                     left: "10%",
-                    padding: "6px 18px",
-                    border: "2px solid #0066FF",
+                    padding: "4px 16px",
+                    border: "2px solid white",
                     borderRadius: "40px",
-                    background: "rgba(0, 102, 255, 0.2)",
-                    color: "#FFFFFF",
-                    fontSize: "clamp(1rem, 2vw, 1.2rem)",
+                    background: "rgba(0, 102, 255, 0.4)",
+                    color: "white",
+                    fontSize: "clamp(0.8rem, 1.5vw, 1rem)",
                     fontWeight: "400",
                     textAlign: "center",
-                    width: "fit-content",
-                    zIndex: 2,
                 }}
             >
-                What's Broken?
+                How It Works
             </div>
 
             {/* Left Column: Catch Phrase */}
@@ -72,9 +69,9 @@ const WhatsBroken = () => {
                     maxWidth: "400px",
                     display: "flex",
                     flexDirection: "column",
-                    justifyContent: "center", // vertically center catch phrase
+                    justifyContent: "center",
                     gap: "20px",
-                    marginTop: "14px", // shifted down slightly
+                    marginTop: "30px", // ✅ more spacing between title and slogan
                     marginBottom: "clamp(20px, 3vw, 40px)",
                 }}
             >
@@ -127,7 +124,6 @@ const WhatsBroken = () => {
                 ))}
             </div>
 
-            {/* Media query and scaling for slogan */}
             <style>{`
                 .slogan-text {
                   font-size: clamp(1.2rem, 2.5vw, 2.5rem);
